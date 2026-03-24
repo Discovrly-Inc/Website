@@ -19,7 +19,6 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ success: false, error: 'Server misconfiguration' }, { status: 500 });
     }
 
-    console.log('[Waitlist] Token prefix:', token.substring(0, 6));
 
     const res = await fetch(`https://api.airtable.com/v0/${baseId}/${tableId}`, {
       method: 'POST',
