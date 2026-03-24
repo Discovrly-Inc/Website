@@ -5,8 +5,20 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 
+const personalDomains = [
+  'gmail.com','yahoo.com','hotmail.com','outlook.com','icloud.com',
+  'aol.com','msn.com','live.com','me.com','mac.com','googlemail.com',
+  'ymail.com','protonmail.com','pm.me','zoho.com','mail.com',
+];
+
 const schema = z.object({
-  email: z.string().email('Please enter a valid email address'),
+  email: z
+    .string()
+    .email('Please enter a valid email address')
+    .refine((val) => {
+      const domain = val.split('@')[1]?.toLowerCase();
+      return !personalDomains.includes(domain);
+    }, 'Please use your work email address'),
 });
 
 type FormData = z.infer<typeof schema>;
