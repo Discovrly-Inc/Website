@@ -1,13 +1,9 @@
 import type { Metadata } from 'next';
 import { GeistSans } from 'geist/font/sans';
+import { GoogleAnalytics } from '@next/third-parties/google';
 import './globals.css';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
-
-// TODO: Add GA4 — see README for setup instructions
-// import { GoogleAnalytics } from '@next/third-parties/google';
-// Usage: <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID!} />
-// Add after </body> closing, inside the html element
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.discovrly.com'),
@@ -38,8 +34,7 @@ export default function RootLayout({
         <main>{children}</main>
         <Footer />
 
-        {/* TODO: Uncomment when GA4 Measurement ID is ready */}
-        {/* <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID!} /> */}
+        <GoogleAnalytics gaId="G-XT9652XEXE" />
       </body>
     </html>
   );
