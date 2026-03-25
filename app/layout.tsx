@@ -4,6 +4,7 @@ import { GoogleAnalytics } from '@next/third-parties/google';
 import './globals.css';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
+import PostHogProvider from '@/components/PostHogProvider';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.discovrly.com'),
@@ -30,10 +31,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={GeistSans.variable}>
       <body className="font-sans">
-        <Nav />
-        <main>{children}</main>
-        <Footer />
-
+        <PostHogProvider>
+          <Nav />
+          <main>{children}</main>
+          <Footer />
+        </PostHogProvider>
         <GoogleAnalytics gaId="G-XT9652XEXE" />
       </body>
     </html>
