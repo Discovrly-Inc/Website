@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { ArrowRight, Check } from 'lucide-react';
 import { generateMetadata } from '@/components/SEO';
 import AnimateOnScroll from '@/components/AnimateOnScroll';
+import CalendlyButton from '@/components/CalendlyButton';
 
 export const metadata: Metadata = generateMetadata({
   title: 'Features — Discovrly | Research Hub, Insight Engine & Auto-Generate',
@@ -144,13 +145,10 @@ export default function FeaturesPage() {
             <p className="text-[18px] text-[#64748b] mb-8 max-w-xl mx-auto leading-[1.7]">
               Join product teams already on the early access list.
             </p>
-            <Link
-              href="/#waitlist"
-              className="inline-flex items-center gap-2 bg-indigo-600 text-white font-semibold rounded-lg px-8 py-4 text-[16px] hover:bg-indigo-700 transition-colors"
-            >
-              Get Early Access
+            <CalendlyButton className="inline-flex items-center gap-2 bg-indigo-600 text-white font-semibold rounded-lg px-8 py-4 text-[16px] hover:bg-indigo-700 transition-colors">
+              Book a Demo
               <ArrowRight size={17} />
-            </Link>
+            </CalendlyButton>
           </AnimateOnScroll>
         </div>
       </section>

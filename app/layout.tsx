@@ -30,6 +30,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={GeistSans.variable}>
+      <head>
+        <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet"/>
+      </head>
       <body className="font-sans">
         <PostHogProvider>
           <Nav />
@@ -37,6 +40,7 @@ export default function RootLayout({
           <Footer />
         </PostHogProvider>
         <GoogleAnalytics gaId="G-XT9652XEXE" />
+        <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
       </body>
     </html>
   );

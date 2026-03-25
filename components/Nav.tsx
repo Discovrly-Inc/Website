@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
+import CalendlyButton from '@/components/CalendlyButton';
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
@@ -48,8 +49,11 @@ export default function Nav() {
             </Link>
           </div>
 
-          {/* Login — right */}
-          <div className="hidden md:flex justify-end">
+          {/* Right: Book a Demo + Login */}
+          <div className="hidden md:flex items-center justify-end gap-4">
+            <CalendlyButton className="bg-indigo-600 text-white text-[14px] font-semibold rounded-lg px-4 py-2 hover:bg-indigo-700 transition-colors">
+              Book a Demo
+            </CalendlyButton>
             <Link
               href="#"
               className="text-[15px] font-medium text-[#64748b] hover:text-[#0f172a] transition-colors"
@@ -104,7 +108,10 @@ export default function Nav() {
             Features
           </Link>
         </nav>
-        <div className="p-4 border-t border-[#e2e8f0]">
+        <div className="p-4 border-t border-[#e2e8f0] flex flex-col gap-3">
+          <CalendlyButton className="block w-full text-center bg-indigo-600 text-white text-[16px] font-semibold rounded-lg px-6 py-3 hover:bg-indigo-700 transition-colors">
+            Book a Demo
+          </CalendlyButton>
           <Link
             href="#"
             onClick={() => setMenuOpen(false)}

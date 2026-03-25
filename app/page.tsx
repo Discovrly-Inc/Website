@@ -6,6 +6,7 @@ import WaitlistForm from '@/components/WaitlistForm';
 import FeatureCard from '@/components/FeatureCard';
 import FlowDiagram from '@/components/FlowDiagram';
 import AnimateOnScroll from '@/components/AnimateOnScroll';
+import CalendlyButton from '@/components/CalendlyButton';
 
 export const metadata: Metadata = generateMetadata({
   title: 'Discovrly — OS for Product Teams | Research to Execution',
@@ -158,13 +159,9 @@ export default function HomePage() {
               decisions, PRDs, and tickets so your team ships the right things with context.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="#waitlist"
-                className="bg-indigo-600 text-white font-semibold rounded-lg px-7 py-4 text-[16px] hover:bg-indigo-700 transition-colors inline-flex items-center justify-center gap-2"
-              >
-                Get Early Access
-                <ArrowRight size={17} />
-              </Link>
+              <CalendlyButton className="bg-indigo-600 text-white font-semibold rounded-lg px-7 py-4 text-[16px] hover:bg-indigo-700 transition-colors inline-flex items-center justify-center gap-2">
+                Book a Demo <ArrowRight size={17} />
+              </CalendlyButton>
               <Link
                 href="#features"
                 className="border border-[#e2e8f0] text-[#0f172a] font-semibold rounded-lg px-7 py-4 text-[16px] hover:border-indigo-300 hover:text-indigo-600 hover:bg-indigo-50 transition-colors inline-flex items-center justify-center"
@@ -476,22 +473,22 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── WAITLIST ─────────────────────────────────────────────────── */}
-      <section id="waitlist" className="bg-indigo-600 py-28">
+      {/* ── BOOK A DEMO ──────────────────────────────────────────────── */}
+      <section id="demo" className="bg-indigo-600 py-28">
         <div className="max-w-6xl mx-auto px-6">
           <AnimateOnScroll>
-            <div className="max-w-xl mx-auto text-center mb-10">
-              <h2 className="text-[36px] md:text-[44px] font-semibold text-white mb-4 tracking-tight">
-                Get Early Access to Discovrly
+            <div className="max-w-2xl mx-auto text-center">
+              <h2 className="text-[36px] md:text-[44px] font-semibold text-white mb-5 tracking-tight">
+                See Discovrly in Action
               </h2>
-              <p className="text-[18px] text-indigo-200 leading-[1.7]">
-                Join product teams bringing their research, decisions, and execution into one
-                system.
+              <p className="text-[18px] text-indigo-200 leading-[1.7] mb-10">
+                Book a 30-minute demo and see how Discovrly connects your research, decisions, and execution in one place.
               </p>
+              <CalendlyButton className="inline-flex items-center gap-2 bg-white text-indigo-600 font-semibold rounded-lg px-8 py-4 text-[17px] hover:bg-indigo-50 transition-colors">
+                Book a Demo
+                <ArrowRight size={18} />
+              </CalendlyButton>
             </div>
-          </AnimateOnScroll>
-          <AnimateOnScroll delay={100}>
-            <WaitlistForm />
           </AnimateOnScroll>
         </div>
       </section>
