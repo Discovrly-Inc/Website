@@ -333,7 +333,7 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-6">
           <AnimateOnScroll>
             <h2 className="text-[36px] md:text-[44px] font-semibold text-[#0f172a] text-center mb-16 tracking-tight">
-              Sound Familiar?
+              Sound familiar?
             </h2>
           </AnimateOnScroll>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
