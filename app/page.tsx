@@ -360,7 +360,7 @@ export default function HomePage() {
           <AnimateOnScroll>
             <div className="max-w-2xl mx-auto text-center mb-4">
               <h2 className="text-[36px] md:text-[44px] font-semibold text-[#0f172a] mb-5 tracking-tight">
-                Connect Your Existing Tools
+                Connect your existing tools
               </h2>
               <p className="text-[18px] text-[#64748b] leading-[1.7]">
                 Discovrly integrates seamlessly with the tools you already use, ensuring no feedback is lost.
