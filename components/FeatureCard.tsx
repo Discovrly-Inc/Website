@@ -38,7 +38,7 @@ export default function FeatureCard({ icon, title, description, delay = 0 }: Fea
       ref={ref}
       className="opacity-0 translate-y-6 transition-all duration-500 ease-out bg-white border border-[#e2e8f0] rounded-2xl p-8 hover:shadow-md transition-shadow"
     >
-      <div className="w-12 h-12 bg-indigo-50 rounded-xl flex items-center justify-center text-indigo-600 mb-5">
+      <div className="w-12 h-12 bg-emerald-50 rounded-xl flex items-center justify-center text-emerald-600 mb-5">
         {icon}
       </div>
       <h3 className="text-[20px] font-semibold text-[#0f172a] mb-3">{title}</h3>

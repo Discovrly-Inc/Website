@@ -10,8 +10,10 @@ const config: Config = {
     extend: {
       colors: {
         brand: {
-          primary: '#4f46e5',
-          hover: '#4338ca',
+          primary: '#059669',
+          hover: '#047857',
+          light: '#d1fae5',
+          textOnLight: '#065f46',
         },
         surface: {
           alt: '#f8f9fb',
@@ -23,7 +25,7 @@ const config: Config = {
         border: '#e2e8f0',
       },
       fontFamily: {
-        sans: ['var(--font-geist-sans)', 'system-ui', 'sans-serif'],
+        sans: ['var(--font-plus-jakarta-sans)', 'system-ui', 'sans-serif'],
       },
       fontSize: {
         'h1': ['56px', { fontWeight: '700', letterSpacing: '-0.02em', lineHeight: '1.1' }],

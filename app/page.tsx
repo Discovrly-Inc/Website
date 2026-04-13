@@ -9,7 +9,7 @@ import AnimateOnScroll from '@/components/AnimateOnScroll';
 import CalendlyButton from '@/components/CalendlyButton';
 
 export const metadata: Metadata = generateMetadata({
-  title: 'Discovrly — OS for Product Teams | Research to Execution',
+  title: 'Discovrly — OS for Product Teams | Increase Decision Velocity',
   description:
     'Discovrly centralizes research, synthesizes insights with AI, and auto-generates PRDs and Jira tickets. The full-vertical operating system for product management teams.',
   path: '/',
@@ -65,7 +65,7 @@ const painCards = [
   },
   {
     title: 'You forget why you made past decisions',
-    body: 'Context gets lost, and teams revisit the same questions again',
+    body: 'Decision quality drops and velocity slows when knowledge walks out the door or gets buried.',
     icon: (
       <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
         {/* Brain outline */}
@@ -94,7 +94,7 @@ const painCards = [
   },
   {
     title: 'Writing PRDs and tickets takes your whole day',
-    body: 'Turning insights into execution is slow and manual',
+    body: 'Slow manual work kills momentum and drags down your entire decision cycle.',
     icon: (
       <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
         {/* Stack of documents */}
@@ -121,6 +121,31 @@ const painCards = [
         <line x1="43.5" y1="36" x2="42" y2="36" stroke="#fca5a5" strokeWidth="1" strokeLinecap="round"/>
         <line x1="36" y1="43.5" x2="36" y2="42" stroke="#fca5a5" strokeWidth="1" strokeLinecap="round"/>
         <line x1="28.5" y1="36" x2="30" y2="36" stroke="#fca5a5" strokeWidth="1" strokeLinecap="round"/>
+      </svg>
+    ),
+  },
+  {
+    title: 'Past decisions get forgotten once features ship',
+    body: 'You miss the chance to learn, so future decisions don\'t get faster or smarter.',
+    icon: (
+      <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        {/* Shipped box / feature */}
+        <rect x="8" y="16" width="20" height="16" rx="3" fill="#fee2e2" stroke="#fca5a5" strokeWidth="1.2"/>
+        <line x1="8" y1="22" x2="28" y2="22" stroke="#fca5a5" strokeWidth="1.2"/>
+        <line x1="18" y1="16" x2="18" y2="22" stroke="#fca5a5" strokeWidth="1.2"/>
+
+        {/* Checkmark — shipped */}
+        <circle cx="34" cy="14" r="8" fill="#fef2f2" stroke="#f87171" strokeWidth="1.5"/>
+        <path d="M30 14l3 3 5-5" stroke="#ef4444" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+
+        {/* Broken chain link — lost connection to past decision */}
+        <path d="M14 36 Q14 42 20 42" stroke="#fca5a5" strokeWidth="1.5" strokeLinecap="round" strokeDasharray="2 2" opacity="0.7"/>
+        <path d="M24 42 Q30 42 30 36" stroke="#fca5a5" strokeWidth="1.5" strokeLinecap="round" strokeDasharray="2 2" opacity="0.4"/>
+
+        {/* Fading dots representing lost history */}
+        <circle cx="22" cy="42" r="1.5" fill="#fca5a5" opacity="0.5"/>
+        <circle cx="26" cy="44" r="1" fill="#fca5a5" opacity="0.3"/>
+        <circle cx="30" cy="43" r="1" fill="#fca5a5" opacity="0.15"/>
       </svg>
     ),
   },
@@ -152,19 +177,18 @@ export default function HomePage() {
               className="text-[48px] md:text-[64px] font-bold text-[#0f172a] leading-[1.08] tracking-[-0.02em] mb-6"
             >
               Your Research Is Everywhere.{' '}
-              <span className="text-indigo-600">Your Roadmap Shouldn&apos;t Be.</span>
+              <span className="text-emerald-600">Your Decisions Shouldn&apos;t Be Slow.</span>
             </h1>
             <p className="text-[18px] md:text-[20px] text-[#64748b] leading-[1.7] mb-10 max-w-2xl mx-auto">
-              Discovrly turns scattered research, feedback, and product signals into clear
-              decisions, PRDs, and tickets so your team ships the right things with context.
+              Discovrly centralizes scattered research, feedback, and product signals. It uses AI to surface clear insights instantly and auto-generates PRDs and tickets. So your team makes better decisions faster and ships with full context.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <CalendlyButton className="bg-indigo-600 text-white font-semibold rounded-lg px-7 py-4 text-[16px] hover:bg-indigo-700 transition-colors inline-flex items-center justify-center gap-2">
+              <CalendlyButton className="bg-emerald-600 text-white font-semibold rounded-lg px-7 py-4 text-[16px] hover:bg-emerald-700 transition-colors inline-flex items-center justify-center gap-2">
                 Book a Demo <ArrowRight size={17} />
               </CalendlyButton>
               <Link
                 href="#features"
-                className="border border-[#e2e8f0] text-[#0f172a] font-semibold rounded-lg px-7 py-4 text-[16px] hover:border-indigo-300 hover:text-indigo-600 hover:bg-indigo-50 transition-colors inline-flex items-center justify-center"
+                className="border border-[#e2e8f0] text-[#0f172a] font-semibold rounded-lg px-7 py-4 text-[16px] hover:border-emerald-300 hover:text-emerald-600 hover:bg-emerald-50 transition-colors inline-flex items-center justify-center"
               >
                 See How It Works
               </Link>
@@ -177,26 +201,18 @@ export default function HomePage() {
               <svg viewBox="0 0 1040 460" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto">
                 <defs>
                   <radialGradient id="hubGlow" cx="50%" cy="50%" r="50%">
-                    <stop offset="0%" stopColor="#4f46e5" stopOpacity="0.15"/>
-                    <stop offset="100%" stopColor="#4f46e5" stopOpacity="0"/>
+                    <stop offset="0%" stopColor="#059669" stopOpacity="0.12"/>
+                    <stop offset="100%" stopColor="#059669" stopOpacity="0"/>
                   </radialGradient>
-                  <linearGradient id="hubGrad" x1="400" y1="150" x2="580" y2="310">
-                    <stop offset="0%" stopColor="#6366f1"/>
-                    <stop offset="100%" stopColor="#4338ca"/>
-                  </linearGradient>
                   <linearGradient id="pathIn" x1="0%" y1="0%" x2="100%" y2="0%">
                     <stop offset="0%" stopColor="#e2e8f0"/>
-                    <stop offset="100%" stopColor="#a5b4fc"/>
-                  </linearGradient>
-                  <linearGradient id="pathOut" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" stopColor="#a5b4fc"/>
-                    <stop offset="100%" stopColor="#c7d2fe"/>
+                    <stop offset="100%" stopColor="#6ee7b7"/>
                   </linearGradient>
                   <filter id="cardShadow" x="-6%" y="-10%" width="112%" height="128%">
                     <feDropShadow dx="0" dy="2" stdDeviation="4" floodColor="#0f172a" floodOpacity="0.06"/>
                   </filter>
                   <filter id="hubShadow" x="-10%" y="-10%" width="120%" height="130%">
-                    <feDropShadow dx="0" dy="4" stdDeviation="14" floodColor="#4f46e5" floodOpacity="0.25"/>
+                    <feDropShadow dx="0" dy="6" stdDeviation="16" floodColor="#059669" floodOpacity="0.3"/>
                   </filter>
                 </defs>
 
@@ -264,7 +280,7 @@ export default function HomePage() {
 
                 {/* ── DISCOVRLY HUB (center) ──────────────────── */}
                 <g filter="url(#hubShadow)">
-                  <rect x="410" y="155" width="170" height="150" rx="22" fill="url(#hubGrad)"/>
+                  <rect x="410" y="155" width="170" height="150" rx="22" fill="#059669"/>
                 </g>
                 <circle cx="495" cy="200" r="18" fill="white" opacity="0.15"/>
                 <text x="495" y="206" textAnchor="middle" fontSize="20" fill="white" fontFamily="system-ui">⚡</text>
@@ -272,13 +288,13 @@ export default function HomePage() {
                 <rect x="422" y="167" width="146" height="126" rx="14" fill="none" stroke="white" strokeWidth="0.5" opacity="0.2"/>
 
                 {/* ── OUTPUT FLOW PATHS ──────────────────────── */}
-                <path d="M580 195 C640 195, 660 115, 740 115" stroke="#a5b4fc" strokeWidth="2" fill="none"/>
-                <path d="M580 230 C650 230, 670 230, 740 230" stroke="#a5b4fc" strokeWidth="2" fill="none"/>
-                <path d="M580 265 C640 265, 660 345, 740 345" stroke="#a5b4fc" strokeWidth="2" fill="none"/>
+                <path d="M580 195 C640 195, 660 115, 740 115" stroke="#34d399" strokeWidth="2" fill="none"/>
+                <path d="M580 230 L740 230" stroke="#34d399" strokeWidth="2" fill="none"/>
+                <path d="M580 265 C640 265, 660 345, 740 345" stroke="#34d399" strokeWidth="2" fill="none"/>
                 {/* Arrow heads */}
-                <path d="M738 111l6 4-6 4" stroke="#a5b4fc" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M738 226l6 4-6 4" stroke="#a5b4fc" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M738 341l6 4-6 4" stroke="#a5b4fc" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M738 111l6 4-6 4" stroke="#34d399" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M738 226l6 4-6 4" stroke="#34d399" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M738 341l6 4-6 4" stroke="#34d399" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
 
                 {/* ── LABEL: "Outputs" ──────────────────────────── */}
 
@@ -286,25 +302,26 @@ export default function HomePage() {
                 {/* Insights */}
                 <g filter="url(#cardShadow)">
                   <rect x="750" y="80" width="260" height="70" rx="16" fill="white"/>
-                  <rect x="750" y="80" width="260" height="70" rx="16" fill="none" stroke="#c7d2fe" strokeWidth="1"/>
-                  <rect x="770" y="96" width="38" height="38" rx="10" fill="#e0e7ff"/>
+                  <rect x="750" y="80" width="260" height="70" rx="16" fill="none" stroke="#a7f3d0" strokeWidth="1"/>
+                  <rect x="770" y="96" width="38" height="38" rx="10" fill="#d1fae5"/>
                   {/* Lightbulb icon */}
-                  <path d="M789 106c-3.3 0-6 2.7-6 6 0 2.1 1.1 4 2.8 5.1v2.4c0 .6.5 1 1 1h4.4c.6 0 1-.4 1-1v-2.4c1.7-1.1 2.8-3 2.8-5.1 0-3.3-2.7-6-6-6zm-1.2 13.5h2.4v-1h-2.4v1zm2.8-3.2l-.4.3v1.4h-2.4v-1.4l-.4-.3c-1.3-.9-2-2.3-2-3.8 0-2.6 2.2-4.8 4.8-4.8s4.8 2.2 4.8 4.8c0 1.5-.8 2.9-2 3.8z" fill="#4338ca"/>
+                  <path d="M789 106c-3.3 0-6 2.7-6 6 0 2.1 1.1 4 2.8 5.1v2.4c0 .6.5 1 1 1h4.4c.6 0 1-.4 1-1v-2.4c1.7-1.1 2.8-3 2.8-5.1 0-3.3-2.7-6-6-6zm-1.2 13.5h2.4v-1h-2.4v1zm2.8-3.2l-.4.3v1.4h-2.4v-1.4l-.4-.3c-1.3-.9-2-2.3-2-3.8 0-2.6 2.2-4.8 4.8-4.8s4.8 2.2 4.8 4.8c0 1.5-.8 2.9-2 3.8z" fill="#059669"/>
                   <text x="824" y="110" fontSize="14" fontWeight="600" fill="#0f172a" fontFamily="system-ui">Insights</text>
-                  <text x="824" y="128" fontSize="10" fill="#475569" fontFamily="system-ui">Auto-synthesized from research</text>
+                  <text x="824" y="125" fontSize="10" fill="#475569" fontFamily="system-ui">Auto-synthesized</text>
+                  <text x="824" y="139" fontSize="10" fill="#475569" fontFamily="system-ui">from research</text>
                 </g>
 
                 {/* PRDs */}
                 <g filter="url(#cardShadow)">
                   <rect x="750" y="195" width="260" height="70" rx="16" fill="white"/>
-                  <rect x="750" y="195" width="260" height="70" rx="16" fill="none" stroke="#c7d2fe" strokeWidth="1"/>
-                  <rect x="770" y="211" width="38" height="38" rx="10" fill="#ddd6fe"/>
+                  <rect x="750" y="195" width="260" height="70" rx="16" fill="none" stroke="#a7f3d0" strokeWidth="1"/>
+                  <rect x="770" y="211" width="38" height="38" rx="10" fill="#bbf7d0"/>
                   {/* Document icon */}
-                  <rect x="781" y="218" width="16" height="20" rx="2" fill="none" stroke="#5b21b6" strokeWidth="1.5"/>
-                  <path d="M787 218v-2c0-.6.4-1 1-1h4l4 4v1" fill="none" stroke="#5b21b6" strokeWidth="1.2" strokeLinejoin="round"/>
-                  <line x1="784" y1="226" x2="794" y2="226" stroke="#5b21b6" strokeWidth="1.2" strokeLinecap="round"/>
-                  <line x1="784" y1="230" x2="794" y2="230" stroke="#5b21b6" strokeWidth="1.2" strokeLinecap="round"/>
-                  <line x1="784" y1="234" x2="790" y2="234" stroke="#5b21b6" strokeWidth="1.2" strokeLinecap="round"/>
+                  <rect x="781" y="218" width="16" height="20" rx="2" fill="none" stroke="#059669" strokeWidth="1.5"/>
+                  <path d="M787 218v-2c0-.6.4-1 1-1h4l4 4v1" fill="none" stroke="#059669" strokeWidth="1.2" strokeLinejoin="round"/>
+                  <line x1="784" y1="226" x2="794" y2="226" stroke="#059669" strokeWidth="1.2" strokeLinecap="round"/>
+                  <line x1="784" y1="230" x2="794" y2="230" stroke="#059669" strokeWidth="1.2" strokeLinecap="round"/>
+                  <line x1="784" y1="234" x2="790" y2="234" stroke="#059669" strokeWidth="1.2" strokeLinecap="round"/>
                   <text x="824" y="225" fontSize="14" fontWeight="600" fill="#0f172a" fontFamily="system-ui">PRDs &amp; Stories</text>
                   <text x="824" y="243" fontSize="10" fill="#475569" fontFamily="system-ui">Generated with full context</text>
                 </g>
@@ -312,13 +329,13 @@ export default function HomePage() {
                 {/* Tickets */}
                 <g filter="url(#cardShadow)">
                   <rect x="750" y="310" width="260" height="70" rx="16" fill="white"/>
-                  <rect x="750" y="310" width="260" height="70" rx="16" fill="none" stroke="#c7d2fe" strokeWidth="1"/>
-                  <rect x="770" y="326" width="38" height="38" rx="10" fill="#c7d2fe"/>
+                  <rect x="750" y="310" width="260" height="70" rx="16" fill="none" stroke="#a7f3d0" strokeWidth="1"/>
+                  <rect x="770" y="326" width="38" height="38" rx="10" fill="#a7f3d0"/>
                   {/* Ticket icon */}
-                  <rect x="779" y="336" width="20" height="14" rx="2.5" fill="none" stroke="#3730a3" strokeWidth="1.5"/>
-                  <line x1="779" y1="340" x2="799" y2="340" stroke="#3730a3" strokeWidth="1.2"/>
-                  <line x1="783" y1="344" x2="791" y2="344" stroke="#3730a3" strokeWidth="1" strokeLinecap="round" opacity="0.6"/>
-                  <line x1="783" y1="347" x2="788" y2="347" stroke="#3730a3" strokeWidth="1" strokeLinecap="round" opacity="0.4"/>
+                  <rect x="779" y="336" width="20" height="14" rx="2.5" fill="none" stroke="#065f46" strokeWidth="1.5"/>
+                  <line x1="779" y1="340" x2="799" y2="340" stroke="#065f46" strokeWidth="1.2"/>
+                  <line x1="783" y1="344" x2="791" y2="344" stroke="#065f46" strokeWidth="1" strokeLinecap="round" opacity="0.6"/>
+                  <line x1="783" y1="347" x2="788" y2="347" stroke="#065f46" strokeWidth="1" strokeLinecap="round" opacity="0.4"/>
                   <text x="824" y="340" fontSize="14" fontWeight="600" fill="#0f172a" fontFamily="system-ui">Jira &amp; Linear Tickets</text>
                   <text x="824" y="358" fontSize="10" fill="#475569" fontFamily="system-ui">Ready to assign &amp; ship</text>
                 </g>
@@ -336,7 +353,7 @@ export default function HomePage() {
               Sound familiar?
             </h2>
           </AnimateOnScroll>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
             {painCards.map((card, i) => (
               <AnimateOnScroll key={card.title} delay={i * 100}>
                 <div className="bg-white border border-[#e2e8f0] rounded-2xl p-8 hover:shadow-md transition-shadow h-full">
@@ -401,11 +418,10 @@ export default function HomePage() {
           <AnimateOnScroll>
             <div className="max-w-2xl mx-auto text-center mb-14">
               <h2 className="text-[36px] md:text-[44px] font-semibold text-[#0f172a] mb-5 tracking-tight">
-                Turn research into decisions and shipped product
+                The OS for Higher Decision Velocity
               </h2>
               <p className="text-[18px] text-[#64748b] leading-[1.7]">
-                From research to shipped features, Discovrly connects discovery, decisions, and
-                execution in one place.
+                Discovrly connects research, insights, decisions, and outcomes in one intelligent platform. Instead of losing time to context switching and manual translation, your team synthesizes signals in minutes, makes confident calls, turns them into action instantly, and closes the loop on every decision.
               </p>
             </div>
           </AnimateOnScroll>
@@ -418,9 +434,7 @@ export default function HomePage() {
 
           <AnimateOnScroll delay={150}>
             <p className="text-[17px] text-[#64748b] leading-[1.8] text-center max-w-2xl mx-auto">
-              Discovrly connects your data across tools and turns it into decisions and execution
-              in one place. Every insight, decision, and outcome is captured so your product
-              knowledge compounds over time.
+              Your institutional knowledge compounds. So each new decision gets faster and smarter.
             </p>
           </AnimateOnScroll>
         </div>
@@ -432,39 +446,42 @@ export default function HomePage() {
           <AnimateOnScroll>
             <div className="max-w-2xl mx-auto text-center mb-16">
               <h2 className="text-[36px] md:text-[44px] font-semibold text-[#0f172a] mb-5 tracking-tight">
-                Everything you need to ship smarter
+                Everything You Need to Increase Decision Velocity
               </h2>
-              <p className="text-[18px] text-[#64748b] leading-[1.7]">
-                One platform connecting research to roadmap to reality.
-              </p>
             </div>
           </AnimateOnScroll>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
             <FeatureCard
               delay={0}
               icon={<Database size={22} />}
               title="Research Hub"
-              description="Centralize interviews, surveys, docs, and product signals from every tool your team uses."
+              description="Stop hunting for context. Centralize interviews, surveys, customer calls, support tickets, and product data from every tool into one searchable system. So decisions start with complete information."
             />
             <FeatureCard
               delay={100}
               icon={<Lightbulb size={22} />}
               title="Insight Engine"
-              description="Turn research and signals into clear insights, themes, and gaps so you know what to build and why."
+              description="AI that thinks like a PM. Automatically synthesizes raw research into clear themes, surfaces gaps and conflicts, and delivers actionable recommendations. This accelerates high-quality decisions."
             />
             <FeatureCard
               delay={200}
               icon={<FileText size={22} />}
               title="Auto-Generate"
-              description="Generate PRDs, user stories, and Jira-ready tickets with full context from your research."
+              description="From insight to execution in seconds. One-click generation of PRDs, user stories, and Jira or Linear-ready tickets with full research context. So decisions turn into shipped work without losing momentum."
+            />
+            <FeatureCard
+              delay={300}
+              icon={<ArrowRight size={22} />}
+              title="Decision Tracking"
+              description="Close the loop and compound velocity. Link every shipped feature back to the original research and decision. Measure real outcomes and build a living decision history that makes future decisions dramatically faster."
             />
           </div>
 
           <AnimateOnScroll delay={100} className="mt-10 text-center">
             <Link
               href="/features"
-              className="inline-flex items-center gap-2 border border-indigo-600 text-indigo-600 font-semibold rounded-lg px-6 py-3 hover:bg-indigo-50 transition-colors text-[16px]"
+              className="inline-flex items-center gap-2 border border-emerald-600 text-emerald-600 font-semibold rounded-lg px-6 py-3 hover:bg-emerald-50 transition-colors text-[16px]"
             >
               See all features
               <ArrowRight size={16} />
@@ -473,18 +490,55 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── DIFFERENTIATION ──────────────────────────────────────────── */}
+      <section className="bg-white py-28">
+        <div className="max-w-6xl mx-auto px-6">
+          <AnimateOnScroll>
+            <div className="max-w-2xl mx-auto text-center mb-14">
+              <h2 className="text-[36px] md:text-[44px] font-semibold text-[#0f172a] mb-5 tracking-tight">
+                Built for Sustained Decision Velocity
+              </h2>
+              <p className="text-[18px] text-[#64748b] leading-[1.7]">
+                Most tools give you fragments. Discovrly gives you the full picture so decision velocity keeps rising over time.
+              </p>
+            </div>
+          </AnimateOnScroll>
+
+          <AnimateOnScroll delay={100}>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
+              {[
+                { label: 'End-to-End Coverage', body: 'From raw signals to tracked outcomes in one platform' },
+                { label: 'Global Knowledge Repository', body: 'Nothing gets lost. Every past decision stays accessible' },
+                { label: 'Closed-Loop Tracking', body: 'Measure impact and turn learnings into faster future decisions' },
+                { label: 'Deep Integrations', body: 'Always works with the tools your team already uses' },
+              ].map((item) => (
+                <div key={item.label} className="flex items-start gap-4 bg-[#f8f9fb] border border-[#e2e8f0] rounded-2xl p-6">
+                  <span className="mt-0.5 w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center flex-shrink-0">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#059669" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                  </span>
+                  <div>
+                    <p className="text-[16px] font-semibold text-[#0f172a] mb-1">{item.label}</p>
+                    <p className="text-[15px] text-[#64748b] leading-[1.6]">{item.body}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </AnimateOnScroll>
+        </div>
+      </section>
+
       {/* ── BOOK A DEMO ──────────────────────────────────────────────── */}
-      <section id="demo" className="bg-indigo-600 py-28">
+      <section id="demo" className="bg-emerald-600 py-28">
         <div className="max-w-6xl mx-auto px-6">
           <AnimateOnScroll>
             <div className="max-w-2xl mx-auto text-center">
               <h2 className="text-[36px] md:text-[44px] font-semibold text-white mb-5 tracking-tight">
-                See Discovrly in Action
+                Ready to Increase Your Decision Velocity?
               </h2>
-              <p className="text-[18px] text-indigo-200 leading-[1.7] mb-10">
-                Book a 30-minute demo and see how Discovrly connects your research, decisions, and execution in one place.
+              <p className="text-[18px] text-emerald-200 leading-[1.7] mb-10">
+                See how product teams are making faster, better decisions with Discovrly.
               </p>
-              <CalendlyButton className="inline-flex items-center gap-2 bg-white text-indigo-600 font-semibold rounded-lg px-8 py-4 text-[17px] hover:bg-indigo-50 transition-colors">
+              <CalendlyButton className="inline-flex items-center gap-2 bg-white text-emerald-600 font-semibold rounded-lg px-8 py-4 text-[17px] hover:bg-emerald-50 transition-colors">
                 Book a Demo
                 <ArrowRight size={18} />
               </CalendlyButton>

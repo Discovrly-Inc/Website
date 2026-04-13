@@ -3,7 +3,7 @@ import { generateMetadata } from '@/components/SEO';
 
 export const metadata: Metadata = generateMetadata({
   title: 'Terms of Service — Discovrly',
-  description: "Discovrly's terms of service.",
+  description: "Discovrly's terms of service governing access to and use of the platform.",
   path: '/terms',
 });
 
@@ -14,143 +14,202 @@ export default function TermsPage() {
         <h1 className="text-[40px] font-bold text-[#0f172a] tracking-tight mb-3 leading-[1.15]">
           Terms of Service
         </h1>
-        <p className="text-[15px] text-[#64748b] mb-12">Last updated: March 23, 2026</p>
+        <p className="text-[15px] text-[#64748b] mb-12">Last updated: April 13, 2026</p>
 
         <div className="space-y-10 text-[17px] text-[#374151] leading-[1.8]">
 
-          <Section title="1. Acceptance of Terms">
+          <Section title="1. Introduction and Acceptance">
             <p>
-              By accessing or using the Discovrly website located at www.discovrly.com (the
-              &ldquo;Site&rdquo;), you agree to be bound by these Terms of Service
-              (&ldquo;Terms&rdquo;). If you do not agree to these Terms, do not use the Site.
+              These Terms of Service (&ldquo;Terms&rdquo;) govern your access to and use of the
+              Discovrly website, platform, services, and features (collectively, the
+              &ldquo;Service&rdquo;) provided by Discovrly Inc. (&ldquo;Discovrly,&rdquo;
+              &ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;), a Delaware corporation.
             </p>
             <p>
-              Discovrly (&ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;) reserves the
-              right to update these Terms at any time. We will notify users of material changes
-              by posting the new Terms on this page. Continued use of the Site after such changes
-              constitutes acceptance of the new Terms.
+              By accessing or using the Service, or entering into an annual contract with us, you
+              agree to these Terms. If you are acting on behalf of a company, you represent you
+              have authority to bind that entity.
             </p>
-          </Section>
-
-          <Section title="2. Description of Service">
             <p>
-              Discovrly is currently in pre-launch and offers an early access waitlist. The Site
-              provides information about Discovrly&rsquo;s planned product management platform and
-              allows visitors to join the waitlist for early access.
+              We may update these Terms. Continued use after changes means acceptance. Material
+              changes will be notified via email or in-app notice.
             </p>
           </Section>
 
-          <Section title="3. Use of the Site">
-            <p>You agree to use the Site only for lawful purposes and in a manner that does not:</p>
+          <Section title="2. Description of the Service">
+            <p>
+              Discovrly is an operating system for product teams. It centralizes research,
+              insights, feedback, and signals to help generate decisions, PRDs, user stories,
+              tickets, and more. The Service includes integrations with your internal tech stack
+              (e.g., Jira, Slack, etc.) to accelerate research. Access is via annual
+              contracts&mdash;no freemium model.
+            </p>
+          </Section>
+
+          <Section title="3. Eligibility, Accounts, and Contracts">
+            <p>
+              You must be at least 18 (or the age of majority) and have legal capacity. Accounts
+              require accurate information. You are responsible for account security.
+            </p>
+            <p>
+              Annual contracts are governed by a separate Order Form or agreement incorporating
+              these Terms. Subscriptions auto-renew annually unless canceled per the contract. We
+              may suspend access for non-payment.
+            </p>
+          </Section>
+
+          <Section title="4. User Content, Research Data, and Licenses">
+            <p>
+              You retain ownership of all research data, interview notes, feedback, uploads, and
+              other materials you provide (&ldquo;User Content&rdquo;).
+            </p>
+            <p>
+              You grant Discovrly a worldwide, non-exclusive, royalty-free, sublicensable license
+              to host, store, reproduce, modify, analyze, and use your User Content solely to
+              provide, maintain, improve, and deliver the Service (including AI-powered generation
+              of outputs and training/improving our models where permitted).
+            </p>
+            <p>
+              For AI-generated outputs (e.g., PRDs, tickets): As between you and us, you own the
+              outputs, subject to our underlying IP. You receive a limited license to use outputs
+              for your internal business purposes. We do not guarantee their accuracy or
+              completeness.
+            </p>
+            <p>
+              You represent that your User Content does not infringe third-party rights and
+              complies with laws. We may remove violating content.
+            </p>
+          </Section>
+
+          <Section title="5. Acceptable Use">
+            <p>
+              Use the Service only for lawful business purposes. Prohibited: violating laws,
+              uploading harmful code, scraping without permission, interfering with the Service,
+              or using it to compete with us. We may monitor and terminate for violations.
+            </p>
+          </Section>
+
+          <Section title="6. Intellectual Property">
+            <p>
+              The Service, our technology, and branding are our exclusive property. You get a
+              limited license for permitted use during your contract term. Reverse engineering is
+              prohibited. Outputs may incorporate our IP.
+            </p>
+          </Section>
+
+          <Section title="7. Subscriptions, Payments, and Billing">
+            <p>
+              Fees are set in your annual contract/Order Form. Payments are due as specified;
+              late payments may incur fees. Subscriptions auto-renew. You are responsible for
+              taxes. We may change pricing with notice for renewals. No refunds except as required
+              by law or specified in your contract. On termination, access ends, but you may
+              request data export (subject to fees/timelines in your contract).
+            </p>
+          </Section>
+
+          <Section title="8. Termination and Data Export">
+            <p>
+              We may terminate or suspend for breach, non-payment, or other reasons. You may
+              terminate per your contract. Surviving sections include IP, liability, indemnity,
+              and governing law.
+            </p>
+            <p>
+              Upon termination, we will provide reasonable assistance for data export where
+              feasible, per your contract.
+            </p>
+          </Section>
+
+          <Section title="9. Disclaimers (Including AI-Specific)">
+            <p>
+              The Service is provided &ldquo;AS IS.&rdquo; We disclaim all warranties, including
+              accuracy of AI outputs, uninterrupted service, or fitness for your needs.
+            </p>
+            <p>
+              <strong>AI Outputs:</strong> Generated content may contain errors, hallucinations,
+              or inaccuracies. It is not legal, financial, or professional advice. You must
+              independently review, validate, and take responsibility for all decisions based on
+              outputs or research insights.
+            </p>
+            <p>
+              Integrations with third-party tools are at your risk; we are not responsible for
+              those services.
+            </p>
+          </Section>
+
+          <Section title="10. Limitation of Liability">
+            <p>
+              To the maximum extent permitted by law, we are not liable for indirect,
+              consequential, or punitive damages (including lost profits or data). Our total
+              liability shall not exceed the total fees you paid in the 12 months before the
+              claim (or $100 if none).
+            </p>
+          </Section>
+
+          <Section title="11. Indemnity">
+            <p>
+              You agree to indemnify us against claims arising from your User Content, breach of
+              these Terms, or misuse of the Service or outputs.
+            </p>
+          </Section>
+
+          <Section title="12. Third-Party Services">
+            <p>
+              Integrations (e.g., with your tech stack) are subject to those providers&rsquo;
+              terms. We are not liable for them.
+            </p>
+          </Section>
+
+          <Section title="13. Privacy">
+            <p>
+              Our{' '}
+              <a href="/privacy" className="text-emerald-600 hover:underline">
+                Privacy Policy
+              </a>{' '}
+              is incorporated here. It describes how we handle research data and personal
+              information.
+            </p>
+          </Section>
+
+          <Section title="14. Governing Law and Dispute Resolution">
+            <p>
+              These Terms are governed by Delaware law, without regard to conflicts principles.
+            </p>
+            <p>
+              Disputes shall be resolved by binding arbitration in Wilmington, Delaware, under
+              American Arbitration Association rules (single arbitrator). You waive class actions,
+              representative actions, or jury trials. Small claims court is allowed if eligible.
+              This applies to the fullest extent permitted by law.
+            </p>
+          </Section>
+
+          <Section title="15. Miscellaneous">
             <ul className="list-disc pl-6 space-y-2">
-              <li>Violate any applicable laws or regulations</li>
-              <li>Infringe the rights of any third party</li>
-              <li>Transmit any harmful, offensive, or disruptive content</li>
-              <li>Attempt to gain unauthorized access to any part of the Site</li>
-              <li>
-                Interfere with or disrupt the Site&rsquo;s infrastructure or servers
-              </li>
-              <li>Use automated tools to scrape, crawl, or extract data from the Site</li>
+              <li>Severability, no waiver, entire agreement.</li>
+              <li>Export controls compliance.</li>
+              <li>DMCA notices: Contact us below.</li>
             </ul>
           </Section>
 
-          <Section title="4. Intellectual Property">
+          <Section title="16. Contact Us">
+            <p>Discovrly Inc.<br />
+            Universal Registered Agents, Inc.<br />
+            300 Creek View Road, Suite 209<br />
+            Newark, New Castle County, DE 19711</p>
             <p>
-              All content on the Site — including but not limited to text, graphics, logos, icons,
-              images, and software — is the property of Discovrly and is protected by applicable
-              intellectual property laws.
-            </p>
-            <p>
-              You may not reproduce, distribute, modify, create derivative works of, publicly
-              display, or otherwise exploit any content from the Site without our prior written
-              permission.
-            </p>
-          </Section>
-
-          <Section title="5. Waitlist and Early Access">
-            <p>
-              By submitting your email address to join our waitlist, you consent to receive
-              communications from Discovrly regarding the product launch and early access. You
-              may unsubscribe at any time by contacting us at hello@discovrly.com.
-            </p>
-            <p>
-              Joining the waitlist does not guarantee early access, a specific launch date, or
-              any particular product features. Discovrly reserves the right to modify, delay, or
-              discontinue any planned product or feature.
-            </p>
-          </Section>
-
-          <Section title="6. Disclaimers">
-            <p>
-              THE SITE IS PROVIDED ON AN &ldquo;AS IS&rdquo; AND &ldquo;AS AVAILABLE&rdquo;
-              BASIS WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT
-              LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR
-              NON-INFRINGEMENT.
-            </p>
-            <p>
-              We do not warrant that the Site will be uninterrupted, error-free, or free of
-              viruses or other harmful components. We make no warranties about the accuracy,
-              reliability, completeness, or timeliness of the information on the Site.
-            </p>
-          </Section>
-
-          <Section title="7. Limitation of Liability">
-            <p>
-              TO THE FULLEST EXTENT PERMITTED BY LAW, DISCOVRLY SHALL NOT BE LIABLE FOR ANY
-              INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING BUT
-              NOT LIMITED TO LOSS OF PROFITS, LOSS OF DATA, LOSS OF GOODWILL, OR OTHER
-              INTANGIBLE LOSSES, ARISING FROM OR RELATED TO YOUR USE OF THE SITE.
-            </p>
-            <p>
-              IN NO EVENT SHALL OUR TOTAL LIABILITY TO YOU FOR ALL CLAIMS ARISING FROM OR RELATED
-              TO USE OF THE SITE EXCEED ONE HUNDRED DOLLARS (USD $100).
-            </p>
-          </Section>
-
-          <Section title="8. Third-Party Links">
-            <p>
-              The Site may contain links to third-party websites. These links are provided for
-              your convenience only. We have no control over the content of those sites and accept
-              no responsibility for them or for any loss or damage that may arise from your use
-              of them.
-            </p>
-          </Section>
-
-          <Section title="9. Privacy">
-            <p>
-              Your use of the Site is also governed by our{' '}
-              <a href="/privacy" className="text-indigo-600 hover:underline">
-                Privacy Policy
-              </a>
-              , which is incorporated into these Terms by reference.
-            </p>
-          </Section>
-
-          <Section title="10. Governing Law">
-            <p>
-              These Terms shall be governed by and construed in accordance with the laws of the
-              United States, without regard to its conflict of law provisions. Any disputes
-              arising under these Terms shall be subject to the exclusive jurisdiction of the
-              courts located in the United States.
-            </p>
-          </Section>
-
-          <Section title="11. Severability">
-            <p>
-              If any provision of these Terms is found to be unenforceable or invalid, that
-              provision will be limited or eliminated to the minimum extent necessary so that
-              the remaining Terms will otherwise remain in full force and effect.
-            </p>
-          </Section>
-
-          <Section title="12. Contact">
-            <p>
-              If you have questions about these Terms, please contact us at:{' '}
-              <a href="mailto:hello@discovrly.com" className="text-indigo-600 hover:underline">
+              Email:{' '}
+              <a href="mailto:hello@discovrly.com" className="text-emerald-600 hover:underline">
                 hello@discovrly.com
-              </a>
+              </a>{' '}
+              (general inquiries)
+            </p>
+            <p>
+              <a href="mailto:privacy@discovrly.com" className="text-emerald-600 hover:underline">
+                privacy@discovrly.com
+              </a>{' '}
+              (privacy and data requests)
             </p>
           </Section>
+
         </div>
       </article>
     </div>

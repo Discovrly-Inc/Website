@@ -1,5 +1,11 @@
 import type { Metadata } from 'next';
-import { GeistSans } from 'geist/font/sans';
+import { Plus_Jakarta_Sans } from 'next/font/google';
+
+const plusJakartaSans = Plus_Jakarta_Sans({
+  subsets: ['latin'],
+  variable: '--font-plus-jakarta-sans',
+  display: 'swap',
+});
 import { GoogleAnalytics } from '@next/third-parties/google';
 import './globals.css';
 import Nav from '@/components/Nav';
@@ -29,7 +35,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={GeistSans.variable}>
+    <html lang="en" className={plusJakartaSans.variable}>
       <head>
         <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet"/>
       </head>

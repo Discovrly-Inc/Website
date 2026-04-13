@@ -32,11 +32,8 @@ export default function Nav() {
       >
         <nav className="max-w-6xl mx-auto px-6 h-16 grid grid-cols-3 items-center">
           {/* Logo — left */}
-          <Link
-            href="/"
-            className="text-xl font-bold text-[#0f172a] tracking-tight hover:text-indigo-600 transition-colors justify-self-start"
-          >
-            Discovrly
+          <Link href="/" className="justify-self-start hover:opacity-80 transition-opacity">
+            <img src="/logo-option-1.svg" alt="Discovrly" width="180" height="36" />
           </Link>
 
           {/* Center links */}
@@ -51,7 +48,7 @@ export default function Nav() {
 
           {/* Right: Book a Demo + Login */}
           <div className="hidden md:flex items-center justify-end gap-4">
-            <CalendlyButton className="bg-indigo-600 text-white text-[14px] font-semibold rounded-lg px-4 py-2 hover:bg-indigo-700 transition-colors">
+            <CalendlyButton className="bg-emerald-600 text-white text-[14px] font-semibold rounded-lg px-4 py-2 hover:bg-emerald-700 transition-colors">
               Book a Demo
             </CalendlyButton>
             <Link
@@ -65,7 +62,7 @@ export default function Nav() {
           {/* Mobile hamburger */}
           <div className="md:hidden col-start-3 flex justify-end">
             <button
-              className="p-2 text-[#0f172a] hover:text-indigo-600 transition-colors"
+              className="p-2 text-[#0f172a] hover:text-emerald-600 transition-colors"
               onClick={() => setMenuOpen(true)}
               aria-label="Open menu"
             >
@@ -109,7 +106,7 @@ export default function Nav() {
           </Link>
         </nav>
         <div className="p-4 border-t border-[#e2e8f0] flex flex-col gap-3">
-          <CalendlyButton className="block w-full text-center bg-indigo-600 text-white text-[16px] font-semibold rounded-lg px-6 py-3 hover:bg-indigo-700 transition-colors">
+          <CalendlyButton className="block w-full text-center bg-emerald-600 text-white text-[16px] font-semibold rounded-lg px-6 py-3 hover:bg-emerald-700 transition-colors">
             Book a Demo
           </CalendlyButton>
           <Link
